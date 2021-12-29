@@ -32,3 +32,5 @@ C:\Users\adm\source\repos\AspnetMicroservices\src\Services\Discount\Discount.Grp
 C:\Users\adm\source\repos\AspnetMicroservices\src\Services\Discount\Discount.Grpc\bin\Debug\net5.0\Dapper.dll
 C:\Users\adm\source\repos\AspnetMicroservices\src\Services\Discount\Discount.Grpc\bin\Debug\net5.0\Npgsql.dll
 C:\Users\adm\source\repos\AspnetMicroservices\src\Services\Discount\Discount.Grpc\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\adm\source\repos\AspnetMicroservices\src\Services\Discount\Discount.Grpc\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\adm\source\repos\AspnetMicroservices\src\Services\Discount\Discount.Grpc\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
