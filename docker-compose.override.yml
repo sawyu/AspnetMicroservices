@@ -27,6 +27,12 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
 
+   orderdb:
+    container_name: orderdb
+    restart: always
+    ports:
+      - "1433:1433"
+
    pgadmin:
     container_name: pgadmin
     environment:
@@ -88,4 +94,13 @@ services:
       - discountdb
     ports:
       - "8083:80"
+
+   ordering.api:
+     environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "ConnectionString=Data Source=.;Initial Catalog=orderdb;Trusted_Connection=True;MultipleActiveResultSets=true"
+     depends_on:
+      - orderdb
+     ports:
+      - "8084:80"
 

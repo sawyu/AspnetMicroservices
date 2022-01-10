@@ -9,3 +9,4 @@ C:\Users\adm\source\repos\AspnetMicroservices\src\Services\Ordering\Ordering.Dom
 C:\Users\adm\source\repos\AspnetMicroservices\src\Services\Ordering\Ordering.Domain\obj\Debug\net5.0\Ordering.Domain.dll
 C:\Users\adm\source\repos\AspnetMicroservices\src\Services\Ordering\Ordering.Domain\obj\Debug\net5.0\ref\Ordering.Domain.dll
 C:\Users\adm\source\repos\AspnetMicroservices\src\Services\Ordering\Ordering.Domain\obj\Debug\net5.0\Ordering.Domain.pdb
+C:\Users\adm\source\repos\AspnetMicroservices\src\Services\Ordering\Ordering.Domain\obj\Debug\net5.0\Ordering.Domain.csproj.AssemblyReference.cache
