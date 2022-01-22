@@ -7,9 +7,12 @@ services:
     depends_on:
       basketdb:
         condition: service_started
+      rabbitmq:
+        condition: service_started
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       CacheSettings:ConnectionString: basketdb:6379
+      EventBusSettings:HostAddress: amqp://guest:guest@rabbitmq:5672
       GrpcSettings:DiscountUrl: http://discount.grpc
     image: basketapi
     ports:
@@ -101,13 +104,18 @@ services:
   ordering.api:
     build:
       context: C:\Users\adm\source\repos\AspnetMicroservices\src
-      dockerfile: Services/Ordcatalog.apiering/Ordering.API/Dockerfile
+      dockerfile: Services/Ordering/Ordering.API/Dockerfile
+    container_name: ordering.api
     depends_on:
       orderdb:
         condition: service_started
+      rabbitmq:
+        condition: service_started
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ConnectionString: Data Source=.;Initial Catalog=orderdb;Trusted_Connection=True;MultipleActiveResultSets=true
+      ConnectionString: OrderingConnectionString=Server=orderdb;Database=OrderDb;User
+        Id=sa;Password=saw12345678
+      EventBusSettings:HostAddress: amqp://guest:guest@rabbitmq:5672
     image: orderingapi
     ports:
     - published: 8084
@@ -136,6 +144,15 @@ services:
     volumes:
     - portainer_data:/data:rw
     - /var/run/docker.sock:/var/run/docker.sock:rw
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3-management-alpine
+    ports:
+    - published: 5672
+      target: 5672
+    - published: 15672
+      target: 15672
+    restart: always
 version: '3.4'
 volumes:
   mongo_data: {}

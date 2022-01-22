@@ -33,13 +33,20 @@ services:
     ports:
       - "1433:1433"
 
+   rabbitmq:
+    container_name: rabbitmq
+    restart: always
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
    pgadmin:
     container_name: pgadmin
     environment:
      - PGADMIN_DEFAULT_EMAIL=admin@aspnetrun.com
      - PGADMIN_DEFAULT_PASSWORD=admin1234
     restart: always
-    ports:
+    ports:  
       - "5050:80"
     volumes:
       - pgadmin_data:/root/.pgadmin
@@ -70,8 +77,10 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - "CacheSettings:ConnectionString=basketdb:6379"
       - "GrpcSettings:DiscountUrl=http://discount.grpc"
+      - "EventBusSettings:HostAddress=amqp://guest:guest@rabbitmq:5672"
     depends_on:
       - basketdb
+      - rabbitmq
     ports:
       - "8081:80"
 
@@ -96,11 +105,26 @@ services:
       - "8083:80"
 
    ordering.api:
+     container_name: ordering.api
      environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - "ConnectionString=Data Source=.;Initial Catalog=orderdb;Trusted_Connection=True;MultipleActiveResultSets=true"
+      - "ConnectionString=OrderingConnectionString=Server=orderdb;Database=OrderDb;User Id=sa;Password=saw12345678"
+      - "EventBusSettings:HostAddress=amqp://guest:guest@rabbitmq:5672"
      depends_on:
       - orderdb
+      - rabbitmq
      ports:
       - "8084:80"
+
+   ocelotapigw:
+    container_name: ocelotapigw
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - catalog.api
+      - basket.api
+      - discount.api
+      - ordering.api
+    ports:
+      - "8010:80"
 

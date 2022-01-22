@@ -74,3 +74,16 @@ C:\Users\adm\source\repos\AspnetMicroservices\src\Services\Ordering\Ordering.API
 C:\Users\adm\source\repos\AspnetMicroservices\src\Services\Ordering\Ordering.API\bin\Debug\net5.0\Ordering.Domain.pdb
 C:\Users\adm\source\repos\AspnetMicroservices\src\Services\Ordering\Ordering.API\bin\Debug\net5.0\Humanizer.dll
 C:\Users\adm\source\repos\AspnetMicroservices\src\Services\Ordering\Ordering.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\adm\source\repos\AspnetMicroservices\src\Services\Ordering\Ordering.API\bin\Debug\net5.0\Automatonymous.dll
+C:\Users\adm\source\repos\AspnetMicroservices\src\Services\Ordering\Ordering.API\bin\Debug\net5.0\GreenPipes.dll
+C:\Users\adm\source\repos\AspnetMicroservices\src\Services\Ordering\Ordering.API\bin\Debug\net5.0\MassTransit.dll
+C:\Users\adm\source\repos\AspnetMicroservices\src\Services\Ordering\Ordering.API\bin\Debug\net5.0\MassTransit.AspNetCoreIntegration.dll
+C:\Users\adm\source\repos\AspnetMicroservices\src\Services\Ordering\Ordering.API\bin\Debug\net5.0\MassTransit.ExtensionsDependencyInjectionIntegration.dll
+C:\Users\adm\source\repos\AspnetMicroservices\src\Services\Ordering\Ordering.API\bin\Debug\net5.0\MassTransit.RabbitMqTransport.dll
+C:\Users\adm\source\repos\AspnetMicroservices\src\Services\Ordering\Ordering.API\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\adm\source\repos\AspnetMicroservices\src\Services\Ordering\Ordering.API\bin\Debug\net5.0\NewId.dll
+C:\Users\adm\source\repos\AspnetMicroservices\src\Services\Ordering\Ordering.API\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\adm\source\repos\AspnetMicroservices\src\Services\Ordering\Ordering.API\bin\Debug\net5.0\RabbitMQ.Client.dll
+C:\Users\adm\source\repos\AspnetMicroservices\src\Services\Ordering\Ordering.API\bin\Debug\net5.0\System.Text.Json.dll
+C:\Users\adm\source\repos\AspnetMicroservices\src\Services\Ordering\Ordering.API\bin\Debug\net5.0\EventBus.Messages.dll
+C:\Users\adm\source\repos\AspnetMicroservices\src\Services\Ordering\Ordering.API\bin\Debug\net5.0\EventBus.Messages.pdb
