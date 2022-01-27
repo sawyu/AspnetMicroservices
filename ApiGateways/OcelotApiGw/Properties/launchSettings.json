@@ -23,12 +23,6 @@
       },
       "dotnetRunMessages": "true",
       "applicationUrl": "http://localhost:5010"
-    },
-    "Docker (1)": {
-      "commandName": "Docker",
-      "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
-      "publishAllPorts": true
-    }
+    }   
   }
 }
